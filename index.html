@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VelixFreeDownloader</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* Animated Background */
+body::before{
+    content:'';
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,119,255,0.18), transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(0,89,255,0.15), transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(0,162,255,0.15), transparent 20%);
+    animation:bgmove 15s linear infinite;
+    z-index:-1;
+}
+
+@keyframes bgmove{
+    0%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(-5%,-5%);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.title{
+    font-size:60px;
+    font-weight:900;
+    margin-bottom:60px;
+    background:linear-gradient(90deg,#3f8cff,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align:center;
+    text-shadow:0 0 25px rgba(0,119,255,0.5);
+}
+
+.grid{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 0 30px rgba(0,119,255,0.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px rgba(0,119,255,0.4);
+}
+
+.card h2{
+    font-size:30px;
+    margin-bottom:18px;
+    color:#63a9ff;
+}
+
+.card p{
+    color:#cfcfcf;
+    font-size:15px;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+.download-btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+    font-weight:700;
+    background:linear-gradient(90deg,#0066ff,#3399ff);
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(0,102,255,0.45);
+}
+
+.download-btn:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 35px rgba(0,102,255,0.8);
+}
+
+.footer{
+    margin-top:60px;
+    color:#777;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">
+        VelixFreeDownloader
+    </div>
+
+    <div class="grid">
+
+        <!-- VelixFreeOpti -->
+        <div class="card">
+            <h2>VelixFreeOpti</h2>
+
+            <p>
+                Free optimization tweaks for smoother gameplay,
+                reduced input delay and improved responsiveness.
+            </p>
+
+            <a class="download-btn" href="./downloads/VelixFreeOpti.zip">
+                Download
+            </a>
+        </div>
+
+        <!-- VelixProcessReducer -->
+        <div class="card">
+            <h2>VelixProcessReducer</h2>
+
+            <p>
+                Reduce unnecessary background processes and free
+                system resources for better FPS and stability.
+            </p>
+
+            <a class="download-btn" href="./downloads/VelixProcessReducer.zip">
+                Download
+            </a>
+        </div>
+
+        <!-- VelixNetworkPanel -->
+        <div class="card">
+            <h2>VelixNetworkPanel</h2>
+
+            <p>
+                Network optimization tweaks designed to help lower
+                latency, improve routing and reduce lag spikes.
+            </p>
+
+            <a class="download-btn" href="./downloads/VelixNetworkPanel.zip">
+                Download
+            </a>
+        </div>
+
+        <!-- VelixNvidiaPack -->
+        <div class="card">
+            <h2>VelixNvidiaPack</h2>
+
+            <p>
+                NVIDIA optimization pack with graphics tweaks,
+                settings and performance enhancements.
+            </p>
+
+            <a class="download-btn" href="./downloads/VelixNvidiaPack.zip">
+                Download
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 VelixFreeDownloader
+    </div>
+
+</div>
+
+</body>
+</html>
