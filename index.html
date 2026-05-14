@@ -11,14 +11,14 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
-    background:#050816;
+    background:#000;
     color:white;
-    overflow-x:hidden;
     min-height:100vh;
+    overflow-x:hidden;
 }
 
 /* Animated Background */
@@ -28,10 +28,10 @@ body::before{
     width:200%;
     height:200%;
     background:
-    radial-gradient(circle at 20% 20%, rgba(0,119,255,0.18), transparent 20%),
-    radial-gradient(circle at 80% 30%, rgba(0,89,255,0.15), transparent 20%),
-    radial-gradient(circle at 50% 80%, rgba(0,162,255,0.15), transparent 20%);
-    animation:bgmove 15s linear infinite;
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04), transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 20%);
+    animation:bgmove 12s linear infinite;
     z-index:-1;
 }
 
@@ -40,7 +40,7 @@ body::before{
         transform:translate(0,0);
     }
     50%{
-        transform:translate(-5%,-5%);
+        transform:translate(-4%,-4%);
     }
     100%{
         transform:translate(0,0);
@@ -54,55 +54,59 @@ body::before{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 .title{
-    font-size:60px;
+    font-size:58px;
     font-weight:900;
     margin-bottom:60px;
-    background:linear-gradient(90deg,#3f8cff,#ffffff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
     text-align:center;
-    text-shadow:0 0 25px rgba(0,119,255,0.5);
+    color:white;
+    text-shadow:0 0 25px rgba(255,255,255,0.25);
+    word-break:break-word;
 }
 
 .grid{
     width:100%;
-    max-width:1200px;
+    max-width:1450px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(14px);
+    backdrop-filter:blur(10px);
     border-radius:24px;
-    padding:35px;
+    padding:35px 25px;
     text-align:center;
     transition:0.3s;
-    box-shadow:0 0 30px rgba(0,119,255,0.15);
+    box-shadow:0 0 20px rgba(255,255,255,0.06);
+    overflow:hidden;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 40px rgba(0,119,255,0.4);
+    transform:translateY(-7px);
+    box-shadow:0 0 30px rgba(255,255,255,0.12);
 }
 
 .card h2{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:18px;
-    color:#63a9ff;
+    color:white;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 
 .card p{
     color:#cfcfcf;
     font-size:15px;
     margin-bottom:25px;
-    line-height:1.5;
+    line-height:1.6;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 
 .download-btn{
@@ -110,22 +114,23 @@ body::before{
     padding:14px 30px;
     border-radius:14px;
     text-decoration:none;
-    color:white;
+    color:black;
+    background:white;
     font-weight:700;
-    background:linear-gradient(90deg,#0066ff,#3399ff);
     transition:0.3s;
-    box-shadow:0 0 20px rgba(0,102,255,0.45);
+    box-shadow:0 0 18px rgba(255,255,255,0.15);
 }
 
 .download-btn:hover{
-    transform:scale(1.06);
-    box-shadow:0 0 35px rgba(0,102,255,0.8);
+    transform:scale(1.05);
+    box-shadow:0 0 28px rgba(255,255,255,0.25);
 }
 
 .footer{
     margin-top:60px;
-    color:#777;
+    color:#666;
     font-size:14px;
+    text-align:center;
 }
 
 </style>
@@ -192,6 +197,20 @@ body::before{
             </p>
 
             <a class="download-btn" href="./downloads/VelixNvidiaPack.zip">
+                Download
+            </a>
+        </div>
+
+        <!-- VelixKeyboardPanel -->
+        <div class="card">
+            <h2>VelixKeyboardPanel</h2>
+
+            <p>
+                Keyboard optimization tweaks designed to improve
+                responsiveness, reduce delay and enhance input feel.
+            </p>
+
+            <a class="download-btn" href="./downloads/VelixKeyboardPanelV1.zip">
                 Download
             </a>
         </div>
